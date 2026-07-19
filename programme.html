@@ -15,17 +15,27 @@
 
     <!-- NAVBAR -->
     <header>
-        <nav aria-label="Navigation principale">
-            <div>
-                <a href="index.html" aria-label="AfriConnect Summit — Accueil">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="container">
+                <a href="index.html" class="navbar-logo" aria-label="AfriConnect Summit — Accueil">
                     Afri<span>Connect</span>
                 </a>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                    <li><a href="intervenants.html">Intervenants</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="programme.html" class="nav-link">Programme</a></li>
+                    <li><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="navbar-actions">
+                    <button class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -33,9 +43,9 @@
     <main>
 
         <!-- HERO INTERNE -->
-        <section>
-            <div>
-                <nav aria-label="Fil d'Ariane">
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
                     <a href="index.html">Accueil</a>
                     <i class="bi bi-chevron-right"></i>
                     <span>Programme</span>
@@ -46,18 +56,18 @@
         </section>
 
         <!-- ONGLETS PROGRAMME -->
-        <section>
-            <div>
-                <h2>Planning par jour</h2>
-                <div aria-label="Jours de la conférence">
-                    <button>Jour 1 · 15 Sept.</button>
-                    <button>Jour 2 · 16 Sept.</button>
-                    <button>Jour 3 · 17 Sept.</button>
+        <section class="section" aria-labelledby="schedule-title">
+            <div class="container">
+                <h2 id="schedule-title" class="visually-hidden">Planning par jour</h2>
+                <div class="program-tabs" role="tablist" aria-label="Jours de la conférence">
+                    <button class="tab-btn active" data-tab="jour1" role="tab" aria-selected="true">Jour 1 · 15 Sept.</button>
+                    <button class="tab-btn" data-tab="jour2" role="tab" aria-selected="false">Jour 2 · 16 Sept.</button>
+                    <button class="tab-btn" data-tab="jour3" role="tab" aria-selected="false">Jour 3 · 17 Sept.</button>
                 </div>
 
                 <!-- Jour 1 -->
-                <div>
-                    <table>
+                <div id="jour1" class="tab-panel active" role="tabpanel">
+                    <table class="schedule-table">
                         <thead>
                             <tr>
                                 <th>Heure</th>
@@ -114,8 +124,8 @@
                 </div>
 
                 <!-- Jour 2 -->
-                <div>
-                    <table>
+                <div id="jour2" class="tab-panel" role="tabpanel">
+                    <table class="schedule-table">
                         <thead>
                             <tr>
                                 <th>Heure</th>
@@ -172,8 +182,8 @@
                 </div>
 
                 <!-- Jour 3 -->
-                <div>
-                    <table>
+                <div id="jour3" class="tab-panel" role="tabpanel">
+                    <table class="schedule-table">
                         <thead>
                             <tr>
                                 <th>Heure</th>
@@ -226,31 +236,30 @@
         </section>
 
         <!-- SECTION THÉMATIQUES -->
-        <section>
-            <div>
-                <div>
-                    <span>Thématiques</span>
-                    <h2>Les 4 piliers de la conférence</h2>
+        <section class="section" aria-labelledby="themes-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <span class="section-label">Thématiques</span>
+                    <h2 id="themes-title">Les 4 piliers de la conférence</h2>
                 </div>
-                <div>
-                    <article>
-                        <div><i class="bi bi-cpu-fill"></i></div>
+                <div class="themes-grid">
+                    <article class="theme-card animate-on-scroll slide-in-left">
+                        <div class="theme-icon"><i class="bi bi-cpu-fill"></i></div>
                         <h3>IA &amp; Tech</h3>
-                        <p>Intelligence artificielle, machine learning et technologies émergentes au service du
-                            développement africain.</p>
+                        <p>Intelligence artificielle, machine learning et technologies émergentes au service du développement africain.</p>
                     </article>
-                    <article>
-                        <div><i class="bi bi-briefcase-fill"></i></div>
+                    <article class="theme-card animate-on-scroll slide-in-right">
+                        <div class="theme-icon"><i class="bi bi-briefcase-fill"></i></div>
                         <h3>Business &amp; Startup</h3>
                         <p>Entrepreneuriat, levée de fonds, scaling et modèles économiques adaptés aux marchés africains.</p>
                     </article>
-                    <article>
-                        <div><i class="bi bi-palette-fill"></i></div>
+                    <article class="theme-card animate-on-scroll slide-in-left">
+                        <div class="theme-icon"><i class="bi bi-palette-fill"></i></div>
                         <h3>Design &amp; UX</h3>
                         <p>Design inclusif, accessibilité et expériences utilisateur pensées pour les contextes africains.</p>
                     </article>
-                    <article>
-                        <div><i class="bi bi-bar-chart-fill"></i></div>
+                    <article class="theme-card animate-on-scroll slide-in-right">
+                        <div class="theme-icon"><i class="bi bi-bar-chart-fill"></i></div>
                         <h3>Data &amp; Analytics</h3>
                         <p>Big data, visualisation et prise de décision basée sur les données dans les secteurs clés du continent.</p>
                     </article>
@@ -261,20 +270,20 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div>
-            <div>
-                <div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h4>AfriConnect Summit</h4>
                     <p>La conférence tech panafricaine qui connecte les talents, les idées et les investissements pour bâtir l'Afrique numérique de demain.</p>
-                    <div>
+                    <div class="footer-social">
                         <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
@@ -283,21 +292,25 @@
                         <li><a href="contact.html">Contact &amp; Inscription</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
                         <li><i class="bi bi-envelope"></i> <a href="mailto:ndounalandry99@gmail.com">ndounalandry99@gmail.com</a></li>
-                        <li><i class="bi bi-telephone"></i> <a href="tel:+221788392089">+221 78 839 20 89</a></li>
-                        <li><i class="bi bi-geo-alt"></i> km1, avenue Cheikh Anta DIOP Daka, Sénégal </li>
+                        <li><i class="bi bi-telephone"><a href="tel:+221788392089">+221 78 839 20 89</a></li>
+                        <li><i class="bi bi-geo-alt"></i>km1, avenue Cheikh Anta DIOP Daka, Sénégal</li>
                     </ul>
                 </div>
             </div>
-            <div>
+            <div class="footer-bottom">
                 <p>&copy; <span class="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
                 <p>Conçu avec passion pour l'Afrique tech.</p>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="js/main.js"></script>
 </body>

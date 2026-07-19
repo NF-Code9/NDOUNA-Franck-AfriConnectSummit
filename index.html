@@ -15,17 +15,27 @@
 
     <!-- NAVBAR -->
     <header>
-        <nav aria-label="Navigation principale">
-            <div>
-                <a href="index.html" aria-label="AfriConnect Summit — Accueil">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="container">
+                <a href="index.html" class="navbar-logo" aria-label="AfriConnect Summit — Accueil">
                     Afri<span>Connect</span>
                 </a>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                    <li><a href="intervenants.html">Intervenants</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="programme.html" class="nav-link">Programme</a></li>
+                    <li><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="navbar-actions">
+                    <button class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -33,191 +43,189 @@
     <main>
 
         <!-- SECTION HERO -->
-        <section>
-            <div>
-                <div>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-bg"></div>
+            <div class="hero-grid-pattern"></div>
+            <div class="container">
+                <div class="hero-badge">
                     <i class="bi bi-calendar-event"></i>
                     15–17 Septembre 2026 · Dakar, Sénégal
                 </div>
                 <h1 id="hero-title">Connectons l'<em>Afrique</em> au futur numérique</h1>
-                <p>
+                <p class="hero-subtitle">
                     <i class="bi bi-geo-alt-fill"></i>
                     Le rendez-vous panafricain des développeurs, entrepreneurs et investisseurs tech. 3 jours
                     d'inspiration, de networking et d'innovation.
                 </p>
                 <div class="hero-cta">
-                    <a href="contact.html">S'inscrire maintenant</a>
-                    <a href="programme.html">Voir le programme</a>
+                    <a href="contact.html" class="btn btn-primary">S'inscrire maintenant</a>
+                    <a href="programme.html" class="btn btn-outline">Voir le programme</a>
                 </div>
-                <div aria-label="Compte à rebours jusqu'à la conférence">
-                    <div>
-                        <span>00</span>
-                        <span>Jours</span>
+                <div class="countdown" aria-label="Compte à rebours jusqu'à la conférence">
+                    <div class="countdown-item">
+                        <span class="countdown-value" data-unit="days">00</span>
+                        <span class="countdown-label">Jours</span>
                     </div>
-                    <div>
-                        <span>00</span>
-                        <span>Heures</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" data-unit="hours">00</span>
+                        <span class="countdown-label">Heures</span>
                     </div>
-                    <div>
-                        <span>00</span>
-                        <span>Minutes</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" data-unit="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <div>
-                        <span>00</span>
-                        <span>Secondes</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" data-unit="seconds">00</span>
+                        <span class="countdown-label">Secondes</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SECTION CHIFFRES CLÉS -->
-        <section>
-            <div>
-                <div>
-                    <span>En chiffres</span>
-                    <h2>Un événement d'envergure</h2>
+        <section class="section" aria-labelledby="stats-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <span class="section-label">En chiffres</span>
+                    <h2 id="stats-title">Un événement d'envergure</h2>
                 </div>
-                <div>
-                    <article>
-                        <div>0</div>
-                        <p>Participants attendus</p>
+                <div class="stats-grid">
+                    <article class="stat-card animate-on-scroll zoom-in">
+                        <div class="stat-number" data-target="1200" data-prefix="+ ">0</div>
+                        <p class="stat-label">Participants attendus</p>
                     </article>
-                    <article>
-                        <div>0</div>
-                        <p>Intervenants experts</p>
+                    <article class="stat-card animate-on-scroll zoom-in">
+                        <div class="stat-number" data-target="48">0</div>
+                        <p class="stat-label">Intervenants experts</p>
                     </article>
-                    <article>
-                        <div>0</div>
-                        <p>Jours de conférences</p>
+                    <article class="stat-card animate-on-scroll zoom-in">
+                        <div class="stat-number" data-target="3">0</div>
+                        <p class="stat-label">Jours de conférences</p>
                     </article>
-                    <article>
-                        <div>0</div>
-                        <p>Pays représentés</p>
+                    <article class="stat-card animate-on-scroll zoom-in">
+                        <div class="stat-number" data-target="12">0</div>
+                        <p class="stat-label">Pays représentés</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- SECTION POURQUOI PARTICIPER -->
-        <section>
-            <div>
-                <div>
-                    <span>Pourquoi participer</span>
-                    <h2>3 raisons de nous rejoindre</h2>
+        <section class="section" aria-labelledby="why-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <span class="section-label">Pourquoi participer</span>
+                    <h2 id="why-title">3 raisons de nous rejoindre</h2>
                     <p>Découvrez pourquoi AfriConnect Summit est l'événement tech incontournable du continent africain.
                     </p>
                 </div>
-                <div>
-                    <article>
-                        <div><i class="bi bi-lightning-charge-fill"></i></div>
+                <div class="why-grid">
+                    <article class="why-card animate-on-scroll slide-in-left">
+                        <div class="why-icon"><i class="bi bi-lightning-charge-fill"></i></div>
                         <h3>Innovation &amp; Tendances</h3>
-                        <p>Accédez aux dernières avancées en IA, fintech et blockchain présentées par les leaders
-                            africains du secteur.</p>
+                        <p>Accédez aux dernières avancées en IA, fintech et blockchain présentées par les leaders africains du secteur.</p>
                     </article>
-                    <article>
-                        <div><i class="bi bi-people-fill"></i></div>
+                    <article class="why-card animate-on-scroll fade-in">
+                        <div class="why-icon"><i class="bi bi-people-fill"></i></div>
                         <h3>Networking Premium</h3>
-                        <p>Rencontrez plus de 1 200 professionnels, investisseurs et créateurs de startups venus de 12
-                            pays africains.</p>
+                        <p>Rencontrez plus de 1 200 professionnels, investisseurs et créateurs de startups venus de 12 pays africains.</p>
                     </article>
-                    <article>
-                        <div><i class="bi bi-rocket-takeoff-fill"></i></div>
+                    <article class="why-card animate-on-scroll slide-in-right">
+                        <div class="why-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
                         <h3>Opportunités Concrètes</h3>
-                        <p>Participez à des sessions de pitch, des ateliers pratiques et des tables rondes avec des VCs
-                            internationaux.</p>
+                        <p>Participez à des sessions de pitch, des ateliers pratiques et des tables rondes avec des VCs internationaux.</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- SECTION INTERVENANTS VEDETTES -->
-        <section>
-            <div>
-                <div>
-                    <span>Intervenants</span>
-                    <h2>Nos intervenants vedettes</h2>
+        <section class="section" aria-labelledby="speakers-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <span class="section-label">Intervenants</span>
+                    <h2 id="speakers-title">Nos intervenants vedettes</h2>
                     <p>Des experts reconnus partagent leur vision et leur expérience sur scène.</p>
                 </div>
-                <div>
-                    <article>
-                        <div>
-                            <img src="images/n-franck.jpg" alt="Portrait de N. Franck, CEO TechHub Africa"
-                                loading="lazy">
+                <div class="speakers-grid">
+                    <article class="speaker-card animate-on-scroll zoom-in">
+                        <div class="speaker-photo">
+                            <img src="images/n-franck.jpg" alt="Portrait de N. Franck, CEO TechHub Africa" loading="lazy">
                         </div>
-                        <div>
+                        <div class="speaker-info">
                             <h3>N. Franck</h3>
-                            <p>CEO, TechHub Africa</p>
-                            <p class=><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">CEO, TechHub Africa</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
-                    <article>
-                        <div>
+                    <article class="speaker-card animate-on-scroll zoom-in">
+                        <div class="speaker-photo">
                             <img src="images/a-serge.jpg" alt="Portrait d'A. Serge, Lead AI Engineer" loading="lazy">
                         </div>
-                        <div>
+                        <div class="speaker-info">
                             <h3>A. Serge</h3>
-                            <p>Lead AI Engineer</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">Lead AI Engineer</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
-                    <article>
-                        <div>
+                    <article class="speaker-card animate-on-scroll zoom-in">
+                        <div class="speaker-photo">
                             <img src="images/israel-w.jpg" alt="Portrait d'Israel W., VC Partner" loading="lazy">
                         </div>
-                        <div>
+                        <div class="speaker-info">
                             <h3>Israel W.</h3>
-                            <p>VC Partner, Savanna Fund</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">VC Partner, Savanna Fund</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
-                    <article>
-                        <div>
-                            <img src="images/aphie-n.jpg" alt="Portrait de Aphie N., UX Director" loading="lazy">
+                    <article class="speaker-card animate-on-scroll zoom-in">
+                        <div class="speaker-photo">
+                            <img src="images/aphie-n.jpg" alt="Portrait d'Aphie N., UX Director" loading="lazy">
                         </div>
-                        <div>
+                        <div class="speaker-info">
                             <h3>Aphie N.</h3>
-                            <p>UX Director, DesignAfrika</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">UX Director, DesignAfrika</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
                 </div>
-                <div>
-                    <a href="intervenants.html">Voir tous les intervenants</a>
+                <div class="speakers-cta animate-on-scroll fade-in">
+                    <a href="intervenants.html" class="btn btn-secondary">Voir tous les intervenants</a>
                 </div>
             </div>
         </section>
 
         <!-- SECTION SPONSORS -->
-        <section>
-            <div>
-                <div>
-                    <span>Partenaires</span>
-                    <h2>Nos sponsors</h2>
+        <section class="section" aria-labelledby="sponsors-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-in">
+                    <span class="section-label">Partenaires</span>
+                    <h2 id="sponsors-title">Nos sponsors</h2>
                     <p>Ils soutiennent l'écosystème tech africain aux côtés d'AfriConnect Summit.</p>
                 </div>
-                <div>
-                    <div>
-                        <p>Or</p>
-                        <div>
-                            <div>Orange Digital</div>
-                            <div>MTN Group</div>
+                <div class="sponsors-tiers">
+                    <div class="sponsor-tier tier-gold animate-on-scroll fade-in">
+                        <p class="tier-label">Or</p>
+                        <div class="sponsor-logos">
+                            <div class="sponsor-logo">Orange Digital</div>
+                            <div class="sponsor-logo">MTN Group</div>
                         </div>
                     </div>
-                    <div>
-                        <p>Argent</p>
-                        <div>
-                            <div>Wave Mobile</div>
-                            <div>Flutterwave</div>
-                            <div>Andela</div>
+                    <div class="sponsor-tier tier-silver animate-on-scroll fade-in">
+                        <p class="tier-label">Argent</p>
+                        <div class="sponsor-logos">
+                            <div class="sponsor-logo">Wave Mobile</div>
+                            <div class="sponsor-logo">Flutterwave</div>
+                            <div class="sponsor-logo">Andela</div>
                         </div>
                     </div>
-                    <div>
-                        <p>Bronze</p>
-                        <div>
-                            <div>Jumia Tech</div>
-                            <div>Paystack</div>
-                            <div>M-KOPA</div>
-                            <div>AfriLabs</div>
+                    <div class="sponsor-tier tier-bronze animate-on-scroll fade-in">
+                        <p class="tier-label">Bronze</p>
+                        <div class="sponsor-logos">
+                            <div class="sponsor-logo">Jumia Tech</div>
+                            <div class="sponsor-logo">Paystack</div>
+                            <div class="sponsor-logo">M-KOPA</div>
+                            <div class="sponsor-logo">AfriLabs</div>
                         </div>
                     </div>
                 </div>
@@ -227,20 +235,20 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div>
-            <div>
-                <div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h4>AfriConnect Summit</h4>
                     <p>La conférence tech panafricaine qui connecte les talents, les idées et les investissements pour bâtir l'Afrique numérique de demain.</p>
-                    <div>
+                    <div class="footer-social">
                         <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
@@ -249,21 +257,25 @@
                         <li><a href="contact.html">Contact &amp; Inscription</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
                         <li><i class="bi bi-envelope"></i> <a href="mailto:ndounalandry99@gmail.com">ndounalandry99@gmail.com</a></li>
-                        <li><i class="bi bi-telephone"></i> <a href="tel:+221788392089">+221 78 839 20 89</a></li>
-                        <li><i class="bi bi-geo-alt"></i> km1, avenue Cheikh Anta DIOP Daka, Sénégal </li>
+                        <li><i class="bi bi-telephone"><a href="tel:+221788392089">+221 78 839 20 89</a></li>
+                        <li><i class="bi bi-geo-alt"></i>km1, avenue Cheikh Anta DIOP Daka, Sénégal</li>
                     </ul>
                 </div>
             </div>
-            <div>
+            <div class="footer-bottom">
                 <p>&copy; <span class="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
                 <p>Conçu avec passion pour l'Afrique tech.</p>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="js/main.js"></script>
 </body>

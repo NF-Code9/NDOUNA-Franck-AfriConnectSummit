@@ -15,17 +15,27 @@
 
     <!-- NAVBAR -->
     <header>
-        <nav aria-label="Navigation principale">
-            <div>
-                <a href="index.html" aria-label="AfriConnect Summit — Accueil">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="container">
+                <a href="index.html" class="navbar-logo" aria-label="AfriConnect Summit — Accueil">
                     Afri<span>Connect</span>
                 </a>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                    <li><a href="intervenants.html">Intervenants</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="programme.html" class="nav-link">Programme</a></li>
+                    <li><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="navbar-actions">
+                    <button class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -33,140 +43,139 @@
     <main>
 
         <!-- HERO INTERNE -->
-        <section>
-            <div>
-                <nav aria-label="Fil d'Ariane">
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
                     <a href="index.html">Accueil</a>
                     <i class="bi bi-chevron-right"></i>
                     <span>Intervenants</span>
                 </nav>
-                <h1>Nos intervenants</h1>
+                <h1 id="page-title">Nos intervenants</h1>
                 <p>48 experts venus de 12 pays africains partagent leur vision et leur expertise sur scène.</p>
             </div>
         </section>
 
         <!-- FILTRAGE & GRILLE -->
-        <section>
-            <div>
-                <h2>Grille des intervenants</h2>
+        <section class="section" aria-labelledby="speakers-grid-title">
+            <div class="container">
+                <h2 id="speakers-grid-title" class="visually-hidden">Grille des intervenants</h2>
 
                 <!-- Filtres dynamiques -->
-                <div aria-label="Filtrer par thématique">
-                    <button>Tous</button>
-                    <button>IA &amp; Tech</button>
-                    <button>Business</button>
-                    <button>Design</button>
-                    <button>Data</button>
+                <div class="filter-bar" role="group" aria-label="Filtrer par thématique">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="ia-tech">IA &amp; Tech</button>
+                    <button class="filter-btn" data-filter="business">Business</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="data">Data</button>
                 </div>
 
                 <!-- Grille d'intervenants -->
-                <div>
-                    <article>
-                        <div>
-                            <img src="images/n-franck.jpg" alt="Portrait de N. Franck, CEO TechHub Africa"
-                                loading="lazy">
+                <div class="speakers-full-grid">
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="business">
+                        <div class="speaker-photo">
+                            <img src="images/n-franck.jpg" alt="Portrait de N. Franck, CEO TechHub Africa" loading="lazy">
                         </div>
-                        <div>
-                            <span>Business</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Business</span>
                             <h3>N. Franck</h3>
-                            <p>CEO, TechHub Africa</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">CEO, TechHub Africa</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="ia-tech">
+                        <div class="speaker-photo">
                             <img src="images/a-serge.jpg" alt="Portrait d'A. Serge, Lead AI Engineer" loading="lazy">
                         </div>
-                        <div>
-                            <span>IA &amp; Tech</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">IA &amp; Tech</span>
                             <h3>A. Serge</h3>
-                            <p>Lead AI Engineer, DataAfrik</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">Lead AI Engineer, DataAfrik</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="business">
+                        <div class="speaker-photo">
                             <img src="images/israel-w.jpg" alt="Portrait d'Israel W., VC Partner" loading="lazy">
                         </div>
-                        <div>
-                            <span>Business</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Business</span>
                             <h3>Israel W.</h3>
-                            <p>VC Partner, Savanna Fund</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">VC Partner, Savanna Fund</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="design">
+                        <div class="speaker-photo">
                             <img src="images/aphie-n.jpg" alt="Portrait d'Aphie N., UX Director" loading="lazy">
                         </div>
-                        <div>
-                            <span>Design</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Design</span>
                             <h3>Aphie N.</h3>
-                            <p>UX Director, DesignAfrika</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">UX Director, DesignAfrika</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="data">
+                        <div class="speaker-photo">
                             <img src="images/gervais-o.jpg" alt="Portrait de Gervais O., Chief Data Officer" loading="lazy">
                         </div>
-                        <di>
-                            <span>Data</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Data</span>
                             <h3>Gervais O.</h3>
-                            <p>Chief Data Officer, Maghreb Analytics</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">Chief Data Officer, Maghreb Analytics</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="business">
+                        <div class="speaker-photo">
                             <img src="images/gedeon-n.jpg" alt="Portrait de Gédéon N., Fondatrice startup" loading="lazy">
                         </div>
-                        <div>
-                            <span>Business</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Business</span>
                             <h3>Gédéon N.</h3>
-                            <p>Fondatrice, AgriTech Kenya</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">Fondatrice, AgriTech Kenya</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="design">
+                        <div class="speaker-photo">
                             <img src="images/reine-p.jpg" alt="Portrait de Reine P., Design Lead" loading="lazy">
                         </div>
-                        <div>
-                            <span>Design</span>
-                            <h3>Reine P. </h3>
-                            <p>Design Lead, Baobab Studio</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Design</span>
+                            <h3>Reine P.</h3>
+                            <p class="speaker-title">Design Lead, Baobab Studio</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="ia-tech">
+                        <div class="speaker-photo">
                             <img src="images/dolores-s.jpg" alt="Portrait de Dolores S., ML Engineer" loading="lazy">
                         </div>
-                        <div>
-                            <span>IA &amp; Tech</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">IA &amp; Tech</span>
                             <h3>Dolores S.</h3>
-                            <p>ML Engineer, Lagos AI Lab</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">ML Engineer, Lagos AI Lab</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
 
-                    <article>
-                        <div>
+                    <article class="speaker-full-card animate-on-scroll zoom-in" data-category="data">
+                        <div class="speaker-photo">
                             <img src="images/zaina-i.jpg" alt="Portrait de Zaina I., Data Scientist" loading="lazy">
                         </div>
-                        <div>
-                            <span>Data</span>
+                        <div class="speaker-info">
+                            <span class="speaker-specialty">Data</span>
                             <h3>Zaina I.</h3>
-                            <p>Data Scientist, Accra Insights</p>
-                            <p><i class="bi bi-geo-alt"></i> Sénégal</p>
+                            <p class="speaker-title">Data Scientist, Accra Insights</p>
+                            <p class="speaker-country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                         </div>
                     </article>
                 </div>
@@ -176,20 +185,20 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div>
-            <div>
-                <div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h4>AfriConnect Summit</h4>
                     <p>La conférence tech panafricaine qui connecte les talents, les idées et les investissements pour bâtir l'Afrique numérique de demain.</p>
-                    <div>
+                    <div class="footer-social">
                         <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
@@ -198,21 +207,25 @@
                         <li><a href="contact.html">Contact &amp; Inscription</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
                         <li><i class="bi bi-envelope"></i> <a href="mailto:ndounalandry99@gmail.com">ndounalandry99@gmail.com</a></li>
-                        <li><i class="bi bi-telephone"></i> <a href="tel:+221788392089">+221 78 839 20 89</a></li>
-                        <li><i class="bi bi-geo-alt"></i> km1, avenue Cheikh Anta DIOP Daka, Sénégal </li>
+                        <li><i class="bi bi-telephone"><a href="tel:+221788392089">+221 78 839 20 89</a></li>
+                        <li><i class="bi bi-geo-alt"></i>km1, avenue Cheikh Anta DIOP Daka, Sénégal</li>
                     </ul>
                 </div>
             </div>
-            <div>
+            <div class="footer-bottom">
                 <p>&copy; <span class="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
                 <p>Conçu avec passion pour l'Afrique tech.</p>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <script src="js/main.js"></script>
 </body>
