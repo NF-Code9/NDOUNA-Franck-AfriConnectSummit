@@ -1332,6 +1332,40 @@ p {
 }
 
 /* ============================================================
+   RESPONSIVE — Tablette/Desktop (992px)
+   ============================================================ */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers-full-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    justify-content: center;
+  }
+
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-form-col,
+  .contact-info-col {
+    flex: 1 1 100%;
+  }
+
+  .map-container iframe {
+    height: 350px;
+  }
+}
+
+/* ============================================================
    RESPONSIVE — Tablette (768px)
    ============================================================ */
 @media (max-width: 768px) {
@@ -1404,6 +1438,35 @@ p {
 
   .footer-grid {
     flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .page-hero {
+    padding: calc(var(--navbar-height) + var(--spacing-lg)) 0 var(--spacing-lg);
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .filter-bar {
+    gap: var(--spacing-xs);
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .map-container iframe {
+    height: 300px;
   }
 }
 
